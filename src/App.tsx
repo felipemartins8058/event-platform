@@ -6,12 +6,13 @@ import Video from "./components/Video"
 function App() {
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header/>
-      <Sidebar/>
-      <Lesson/>
-      <Video/>
-    </>
+      <main className="flex flex-1" >
+        <Video/>
+        <Sidebar/>
+      </main>
+    </div>
   )
 }
 
