@@ -1,19 +1,25 @@
-import Header from "./components/Header"
-import Lesson from "./components/Lesson"
-import Sidebar from "./components/Sidebar"
-import Video from "./components/Video"
+import { ApolloProvider } from "@apollo/client"
+import { BrowserRouter } from "react-router-dom"
+import { client } from "./lib/apollo"
+import Router from "./routes/Router"
 
 function App() {
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Router/>
+      </BrowserRouter>
+    </ApolloProvider>
+  )
+}
+
+export default App
+
+{/* <div className="flex flex-col min-h-screen">
       <Header/>
       <main className="flex flex-1" >
         <Video/>
         <Sidebar/>
       </main>
-    </div>
-  )
-}
-
-export default App
+    </div> */}
