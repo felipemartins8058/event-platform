@@ -15,11 +15,3 @@ function App() {
 }
 
 export default App
-
-{/* <div className="flex flex-col min-h-screen">
-      <Header/>
-      <main className="flex flex-1" >
-        <Video/>
-        <Sidebar/>
-      </main>
-    </div> */}
